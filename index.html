@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+</head>
+<body>
+  <header class="header">
+    <img src="assets/free-logo-removebg-preview.png" alt="Logo" class="logo">
+  </header>
+
+  <section class="hero">
+    <img src="assets/blog-tipe-kamar-hotel-yang-wajib-diketahui-47-l.jpg" alt="Hero Image" class="hero-image">
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+    </div>
+  </section>
+  
+  <!-- Section Genre -->
+  <div class="genre-section">
+    <div class="genre-item" onclick="activateGenre(this)">
+      <img src="assets/Hotel.png" alt="Luxury" class="genre-icon">
+      <p>Hotel</p>
+    </div>
+    <div class="genre-item" onclick="activateGenre(this)">
+      <img src="assets/Beach.png" alt="Budget" class="genre-icon">
+      <p>Beach</p>
+    </div>
+    <div class="genre-item" onclick="activateGenre(this)">
+      <img src="assets/Nature.png" alt="Family Friendly" class="genre-icon">
+      <p>Nature</p>
+    </div>
+    <div class="genre-item" onclick="activateGenre(this)">
+      <img src="assets/trees.png" alt="Beachfront" class="genre-icon">
+      <p>Forest</p>
+    </div>
+  </div>
+  
+  <section class="hotel-gallery">
+    <button class="carousel-button left">
+      <img src="assets/left-arrow.png" alt="Left Arrow">
+    </button>
+    <button class="carousel-button right">
+      <img src="assets/right-arrow.png" alt="Right Arrow">
+    </button>
+    <div class="hotel-grid" id="hotelGrid">
+      <div class="hotel-card">
+        <img src="assets/8a38ddb60f89ba1aec772862da5ff479.jpg" alt="Hotel 1" class="hotel-image">
+        <div class="hotel-info">
+          <h3>Hotel Sunset</h3>
+          <p class="price">Harga: Rp 500.000/malam</p>
+          <p class="rating">Rating: ⭐⭐⭐⭐</p>
+          <p class="location">Lokasi: Kuta, Bali</p>
+        </div>
+      </div>
+      
+      <div class="hotel-card">
+        <img src="assets/61210_15062417540030702409.jpg" alt="Hotel 2" class="hotel-image">
+        <div class="hotel-info">
+          <h3>Hotel Ocean View</h3>
+          <p class="price">Harga: Rp 750.000/malam</p>
+          <p class="rating">Rating: ⭐⭐⭐⭐⭐</p>
+          <p class="location">Lokasi: Seminyak, Bali</p>
+        </div>
+      </div>
+      
+      <div class="hotel-card">
+        <img src="assets/44417868.jpg" alt="Hotel 3" class="hotel-image">
+        <div class="hotel-info">
+          <h3>Hotel Mountain Retreat</h3>
+          <p class="price">Harga: Rp 600.000/malam</p>
+          <p class="rating">Rating: ⭐⭐⭐⭐</p>
+          <p class="location">Lokasi: Ubud, Bali</p>
+        </div>
+      </div>
+      
+      <div class="hotel-card">
+        <img src="assets/d73d8552dbcc1f98ca4c57b4cfe5085d.jpg" alt="Hotel 4" class="hotel-image">
+        <div class="hotel-info">
+          <h3>Hotel City Center</h3>
+          <p class="price">Harga: Rp 550.000/malam</p>
+          <p class="rating">Rating: ⭐⭐⭐⭐</p>
+          <p class="location">Lokasi: Denpasar, Bali</p>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img src="assets/d73d8552dbcc1f98ca4c57b4cfe5085d.jpg" alt="Hotel 4" class="hotel-image">
+        <div class="hotel-info">
+          <h3>Hotel City Center</h3>
+          <p class="price">Harga: Rp 550.000/malam</p>
+          <p class="rating">Rating: ⭐⭐⭐⭐</p>
+          <p class="location">Lokasi: Denpasar, Bali</p>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img src="assets/d73d8552dbcc1f98ca4c57b4cfe5085d.jpg" alt="Hotel 4" class="hotel-image">
+        <div class="hotel-info">
+          <h3>Hotel City Center</h3>
+          <p class="price">Harga: Rp 550.000/malam</p>
+          <p class="rating">Rating: ⭐⭐⭐⭐</p>
+          <p class="location">Lokasi: Denpasar, Bali</p>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img src="assets/61210_15062417540030702409.jpg" alt="Hotel 2" class="hotel-image">
+        <div class="hotel-info">
+          <h3>Hotel Ocean View</h3>
+          <p class="price">Harga: Rp 750.000/malam</p>
+          <p class="rating">Rating: ⭐⭐⭐⭐⭐</p>
+          <p class="location">Lokasi: Seminyak, Bali</p>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img src="assets/44417868.jpg" alt="Hotel 3" class="hotel-image">
+        <div class="hotel-info">
+          <h3>Hotel Mountain Retreat</h3>
+          <p class="price">Harga: Rp 600.000/malam</p>
+          <p class="rating">Rating: ⭐⭐⭐⭐</p>
+          <p class="location">Lokasi: Ubud, Bali</p>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img src="assets/d73d8552dbcc1f98ca4c57b4cfe5085d.jpg" alt="Hotel 4" class="hotel-image">
+        <div class="hotel-info">
+          <h3>Hotel City Center</h3>
+          <p class="price">Harga: Rp 550.000/malam</p>
+          <p class="rating">Rating: ⭐⭐⭐⭐</p>
+          <p class="location">Lokasi: Denpasar, Bali</p>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img src="assets/d73d8552dbcc1f98ca4c57b4cfe5085d.jpg" alt="Hotel 4" class="hotel-image">
+        <div class="hotel-info">
+          <h3>Hotel City Center</h3>
+          <p class="price">Harga: Rp 550.000/malam</p>
+          <p class="rating">Rating: ⭐⭐⭐⭐</p>
+          <p class="location">Lokasi: Denpasar, Bali</p>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img src="assets/44417868.jpg" alt="Hotel 3" class="hotel-image">
+        <div class="hotel-info">
+          <h3>Hotel Mountain Retreat</h3>
+          <p class="price">Harga: Rp 600.000/malam</p>
+          <p class="rating">Rating: ⭐⭐⭐⭐</p>
+          <p class="location">Lokasi: Ubud, Bali</p>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img src="assets/61210_15062417540030702409.jpg" alt="Hotel 2" class="hotel-image">
+        <div class="hotel-info">
+          <h3>Hotel Ocean View</h3>
+          <p class="price">Harga: Rp 750.000/malam</p>
+          <p class="rating">Rating: ⭐⭐⭐⭐⭐</p>
+          <p class="location">Lokasi: Seminyak, Bali</p>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img src="assets/d73d8552dbcc1f98ca4c57b4cfe5085d.jpg" alt="Hotel 4" class="hotel-image">
+        <div class="hotel-info">
+          <h3>Hotel City Center</h3>
+          <p class="price">Harga: Rp 550.000/malam</p>
+          <p class="rating">Rating: ⭐⭐⭐⭐</p>
+          <p class="location">Lokasi: Denpasar, Bali</p>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img src="assets/61210_15062417540030702409.jpg" alt="Hotel 2" class="hotel-image">
+        <div class="hotel-info">
+          <h3>Hotel Ocean View</h3>
+          <p class="price">Harga: Rp 750.000/malam</p>
+          <p class="rating">Rating: ⭐⭐⭐⭐⭐</p>
+          <p class="location">Lokasi: Seminyak, Bali</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Tambahkan defer jika di dalam head -->
+
+
+  <section id="map-container">
+    <div class="container">
+      <h3 class="text-center section-subheading">TERSEBAR DI HAMPIR SERLURUH PULAU DI INDONESIA</h3>
+      <h1 class="text-center section-heading">Memastikan Anda Mendapatkan Tempat Istirahat</h1>
+    </div>
+    <div class="container">
+      <div class="swiper tranding-slider">
+        <div class="swiper-wrapper">
+          <!-- Slide-start -->
+          <div class="swiper-slide tranding-slide">
+            <div class="tranding-slide-img">
+              <img src="assets/34957729-removebg-preview.png" alt="Tranding">
+            </div>
+            <div class="tranding-slide-content">
+              <div class="tranding-slide-content-bottom">
+                <h2 class="food-name">PULAU BALI</h2>
+              </div>
+            </div>
+          </div>
+          <!-- Slide lainnya mengikuti struktur yang sama -->
+          <div class="swiper-slide tranding-slide">
+            <div class="tranding-slide-img">
+              <img src="assets/34958824-removebg-preview.png" alt="Tranding">
+            </div>
+            <div class="tranding-slide-content">
+              <div class="tranding-slide-content-bottom">
+                <h2 class="food-name">PULAU SUMATERA</h2>
+              </div>
+            </div>
+          </div>
+          <!-- Tambahkan slide lain sesuai kebutuhan -->
+          <div class="swiper-slide tranding-slide">
+            <div class="tranding-slide-img">
+              <img src="assets/34958238-removebg-preview.png" alt="Tranding">
+            </div>
+            <div class="tranding-slide-content">
+              <div class="tranding-slide-content-bottom">
+                <h2 class="food-name">PULAU JAWA</h2>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide tranding-slide">
+            <div class="tranding-slide-img">
+              <img src="assets/34958250-removebg-preview.png" alt="Tranding">
+            </div>
+            <div class="tranding-slide-content">
+              <div class="tranding-slide-content-bottom">
+                <h2 class="food-name">PULAU KALIMANTAN</h2>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide tranding-slide">
+            <div class="tranding-slide-img">
+              <img src="assets/34958821-removebg-preview.png" alt="Tranding">
+            </div>
+            <div class="tranding-slide-content">
+              <div class="tranding-slide-content-bottom">
+                <h2 class="food-name">PULAU SULAWESI</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tranding-slider-control">
+          <div class="swiper-button-prev slider-arrow">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </div>
+          <div class="swiper-button-next slider-arrow">
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="hotel-gallery">
+    <button class="carousel-button left">
+      <img src="assets/left-arrow.png" alt="Left Arrow">
+    </button>
+    <button class="carousel-button right">
+      <img src="assets/right-arrow.png" alt="Right Arrow">
+    </button>
+    <div class="hotel-grid" id="hotelGrid">
+      <div class="hotel-card">
+        <img src="assets/8a38ddb60f89ba1aec772862da5ff479.jpg" alt="Hotel 1" class="hotel-image">
+        <div class="hotel-info">
+          <h3>Hotel Sunset</h3>
+          <p class="price">Harga: Rp 500.000/malam</p>
+          <p class="rating">Rating: ⭐⭐⭐⭐</p>
+          <p class="location">Lokasi: Kuta, Bali</p>
+        </div>
+      </div>
+      
+      <div class="hotel-card">
+        <img src="assets/61210_15062417540030702409.jpg" alt="Hotel 2" class="hotel-image">
+        <div class="hotel-info">
+          <h3>Hotel Ocean View</h3>
+          <p class="price">Harga: Rp 750.000/malam</p>
+          <p class="rating">Rating: ⭐⭐⭐⭐⭐</p>
+          <p class="location">Lokasi: Seminyak, Bali</p>
+        </div>
+      </div>
+      
+      <div class="hotel-card">
+        <img src="assets/44417868.jpg" alt="Hotel 3" class="hotel-image">
+        <div class="hotel-info">
+          <h3>Hotel Mountain Retreat</h3>
+          <p class="price">Harga: Rp 600.000/malam</p>
+          <p class="rating">Rating: ⭐⭐⭐⭐</p>
+          <p class="location">Lokasi: Ubud, Bali</p>
+        </div>
+      </div>
+      
+      <div class="hotel-card">
+        <img src="assets/d73d8552dbcc1f98ca4c57b4cfe5085d.jpg" alt="Hotel 4" class="hotel-image">
+        <div class="hotel-info">
+          <h3>Hotel City Center</h3>
+          <p class="price">Harga: Rp 550.000/malam</p>
+          <p class="rating">Rating: ⭐⭐⭐⭐</p>
+          <p class="location">Lokasi: Denpasar, Bali</p>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img src="assets/d73d8552dbcc1f98ca4c57b4cfe5085d.jpg" alt="Hotel 4" class="hotel-image">
+        <div class="hotel-info">
+          <h3>Hotel City Center</h3>
+          <p class="price">Harga: Rp 550.000/malam</p>
+          <p class="rating">Rating: ⭐⭐⭐⭐</p>
+          <p class="location">Lokasi: Denpasar, Bali</p>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img src="assets/d73d8552dbcc1f98ca4c57b4cfe5085d.jpg" alt="Hotel 4" class="hotel-image">
+        <div class="hotel-info">
+          <h3>Hotel City Center</h3>
+          <p class="price">Harga: Rp 550.000/malam</p>
+          <p class="rating">Rating: ⭐⭐⭐⭐</p>
+          <p class="location">Lokasi: Denpasar, Bali</p>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img src="assets/61210_15062417540030702409.jpg" alt="Hotel 2" class="hotel-image">
+        <div class="hotel-info">
+          <h3>Hotel Ocean View</h3>
+          <p class="price">Harga: Rp 750.000/malam</p>
+          <p class="rating">Rating: ⭐⭐⭐⭐⭐</p>
+          <p class="location">Lokasi: Seminyak, Bali</p>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img src="assets/44417868.jpg" alt="Hotel 3" class="hotel-image">
+        <div class="hotel-info">
+          <h3>Hotel Mountain Retreat</h3>
+          <p class="price">Harga: Rp 600.000/malam</p>
+          <p class="rating">Rating: ⭐⭐⭐⭐</p>
+          <p class="location">Lokasi: Ubud, Bali</p>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img src="assets/d73d8552dbcc1f98ca4c57b4cfe5085d.jpg" alt="Hotel 4" class="hotel-image">
+        <div class="hotel-info">
+          <h3>Hotel City Center</h3>
+          <p class="price">Harga: Rp 550.000/malam</p>
+          <p class="rating">Rating: ⭐⭐⭐⭐</p>
+          <p class="location">Lokasi: Denpasar, Bali</p>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img src="assets/d73d8552dbcc1f98ca4c57b4cfe5085d.jpg" alt="Hotel 4" class="hotel-image">
+        <div class="hotel-info">
+          <h3>Hotel City Center</h3>
+          <p class="price">Harga: Rp 550.000/malam</p>
+          <p class="rating">Rating: ⭐⭐⭐⭐</p>
+          <p class="location">Lokasi: Denpasar, Bali</p>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img src="assets/44417868.jpg" alt="Hotel 3" class="hotel-image">
+        <div class="hotel-info">
+          <h3>Hotel Mountain Retreat</h3>
+          <p class="price">Harga: Rp 600.000/malam</p>
+          <p class="rating">Rating: ⭐⭐⭐⭐</p>
+          <p class="location">Lokasi: Ubud, Bali</p>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img src="assets/61210_15062417540030702409.jpg" alt="Hotel 2" class="hotel-image">
+        <div class="hotel-info">
+          <h3>Hotel Ocean View</h3>
+          <p class="price">Harga: Rp 750.000/malam</p>
+          <p class="rating">Rating: ⭐⭐⭐⭐⭐</p>
+          <p class="location">Lokasi: Seminyak, Bali</p>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img src="assets/d73d8552dbcc1f98ca4c57b4cfe5085d.jpg" alt="Hotel 4" class="hotel-image">
+        <div class="hotel-info">
+          <h3>Hotel City Center</h3>
+          <p class="price">Harga: Rp 550.000/malam</p>
+          <p class="rating">Rating: ⭐⭐⭐⭐</p>
+          <p class="location">Lokasi: Denpasar, Bali</p>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img src="assets/61210_15062417540030702409.jpg" alt="Hotel 2" class="hotel-image">
+        <div class="hotel-info">
+          <h3>Hotel Ocean View</h3>
+          <p class="price">Harga: Rp 750.000/malam</p>
+          <p class="rating">Rating: ⭐⭐⭐⭐⭐</p>
+          <p class="location">Lokasi: Seminyak, Bali</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"></footer>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
